@@ -2,7 +2,6 @@
 //     player1, player2, player3, player4
 // }
 public abstract class Player {
-    // Common fields
     protected String name;
     protected int score;
 
@@ -11,10 +10,10 @@ public abstract class Player {
         this.score = 0;
     }
 
-    // Abstract method
+    // Abstract method to be implemented by subclasses
     public abstract void makeMove();
 
-    // Common methods
+    // Common methods for both player types
     public String getName() {
         return name;
     }
@@ -22,4 +21,9 @@ public abstract class Player {
     public int getScore() {
         return score;
     }
+
+    public void addScore(int points) {
+        this.score += points;
+    }
 }
+
